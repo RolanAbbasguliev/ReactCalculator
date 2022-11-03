@@ -1,0 +1,7 @@
+@media (max-width: 479px) {
+    .calculator {
+        border-radius: 0px;
+        margin: 0px;
+        overflow-y: hidden;
+    }
+}
