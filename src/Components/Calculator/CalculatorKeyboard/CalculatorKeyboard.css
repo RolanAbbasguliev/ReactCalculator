@@ -1,0 +1,7 @@
+@media (max-height: 790px) {
+    .calculator_keyboard {
+        font-size: 24px;
+        margin-top: 10px
+    }
+
+}

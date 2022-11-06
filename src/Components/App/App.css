@@ -2,6 +2,13 @@
     font-family: "Geometria";
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
 @media (max-width: 479px) {
     .app_container {
 
