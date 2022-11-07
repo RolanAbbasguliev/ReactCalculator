@@ -1,0 +1,10 @@
+@media (max-height: 790px) {
+    .calculator_expression {
+        font-size: 20px;
+    }
+
+    .calculator_result {
+        font-size: 30px;
+    }
+}
+

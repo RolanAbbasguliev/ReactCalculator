@@ -1,4 +1,4 @@
-import { makeAutoObservable, makeObservable } from "mobx";
+import { makeAutoObservable } from "mobx";
 
 interface Operation {
     name: string;
@@ -35,8 +35,6 @@ class Keyboard {
     }
 
     keyHandler(key: string | null): void {
-        console.log(key);
-
         switch (key) {
             case "Backspace":
                 this.expression = this.expression.slice(0, -1);
@@ -64,6 +62,10 @@ class Keyboard {
                 break;
             case "/":
                 this.expression += key;
+                break;
+            case "с":
+                this.expression = "";
+                this.result = 0;
                 break;
             case "C":
                 this.expression = "";
