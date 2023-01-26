@@ -35,6 +35,7 @@ class Keyboard {
     }
 
     keyHandler(key: string | null): void {
+        console.log(key);
         switch (key) {
             case "Backspace":
                 this.expression = this.expression.slice(0, -1);
@@ -45,6 +46,12 @@ class Keyboard {
             case "=":
                 this.result = this.Parser(this.expression);
                 break;
+            // case ")":
+            //     this.expression += key;
+            //     break;
+            // case "(":
+            //     this.expression += key;
+            //     break;
             case "%":
                 this.expression += key;
                 break;
@@ -170,6 +177,7 @@ class Keyboard {
 
     CreatPostfix(str: string): Array<number | Operation | undefined> {
         const tokens: Array<any> = this.CreateTokens(str);
+        console.log("TOKENS", tokens);
         let result: Array<number | Operation | undefined> = [];
         let stack: Array<Operation> = [];
 
@@ -200,10 +208,13 @@ class Keyboard {
         }
         return result;
     }
+    // (1 + 1) * 2
+    // result: 1
+    // stack: ( +
 
     Parser(str: string): number {
         const postfixStr: Array<any> = this.CreatPostfix(str);
-        console.log(postfixStr);
+        console.log("POSTFIX: ", postfixStr);
         const stack: Array<any> = [];
 
         for (let i = 0; i < postfixStr.length; i++) {
