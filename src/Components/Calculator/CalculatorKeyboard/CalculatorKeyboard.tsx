@@ -18,6 +18,9 @@ const CalculatorKeyboard = () => {
                 return button === "=" ? (
                     <button
                         key={button}
+                        onClick={(e) =>
+                            keyboard.keyHandler(e.currentTarget.textContent)
+                        }
                         className="keyboard_item text-[36px] text-[#2B589A] bg-[#FFFFFF] active:bg-[#4B79BE] rounded-full cursor-pointer"
                     >
                         {button}
@@ -25,7 +28,9 @@ const CalculatorKeyboard = () => {
                 ) : (
                     <button
                         key={button}
-                        onClick={(e) => keyboard.keyHandler(e.currentTarget.textContent)}
+                        onClick={(e) =>
+                            keyboard.keyHandler(e.currentTarget.textContent)
+                        }
                         className="keyboard_item text-[36px] active:bg-[#4B79BE] rounded-full cursor-pointer"
                     >
                         {button}
